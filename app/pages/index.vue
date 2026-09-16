@@ -17,7 +17,7 @@ useHead({
     <div class="wrap-wide">
       <div class="tools-grid">
 
-        <NuxtLink class="tool-card featured live" to="/tools/combine-two-pictures">
+        <NuxtLink class="tool-card live" to="/tools/combine-two-pictures">
           <div class="card-sheen"></div>
           <div class="card-icon-wrap">
             <svg viewBox="0 0 256 256" fill="currentColor"><path d="M208,24H48A16,16,0,0,0,32,40V216a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V40A16,16,0,0,0,208,24ZM120,216H48V40h72Zm88,0H136V40h72Z" /></svg>
@@ -29,14 +29,17 @@ useHead({
           </span>
         </NuxtLink>
 
-        <div class="tool-card soon">
+        <NuxtLink class="tool-card live" to="/tools/add-border">
+          <div class="card-sheen"></div>
           <div class="card-icon-wrap">
             <svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16v92.69l-27.35-27.36a16,16,0,0,0-22.63,0L143.31,144H40V56ZM40,200V166.63l68-68,80,80H40Zm176,0H211.31l-32-32,20.35-20.34L216,164.69V200Z" /></svg>
           </div>
           <h3>Border Tool</h3>
           <p class="desc">Add a clean border or frame around any photo, with custom width and color.</p>
-          <span class="soon-badge">Coming soon</span>
-        </div>
+          <span class="card-cta">Open tool
+            <svg viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z" /></svg>
+          </span>
+        </NuxtLink>
 
         <div class="tool-card soon">
           <div class="card-icon-wrap">
@@ -118,5 +121,4 @@ useHead({
   color: var(--color-neutral-400); border: 1px solid var(--color-neutral-600);
   padding: 3px 9px; border-radius: var(--radius-sm); background: color-mix(in srgb, var(--color-neutral-900) 60%, transparent);
 }
-.tool-card.featured .card-cta { border: 1px solid var(--color-accent-600); border-radius: var(--radius-md); padding: 10px 18px; align-self: flex-start; }
 </style>

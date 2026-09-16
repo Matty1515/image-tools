@@ -112,6 +112,38 @@ figcaption {
 .hero .sub { font-size: 17px; line-height: 1.6; max-width: 58ch; color: color-mix(in srgb, var(--color-text) 80%, transparent); margin: var(--space-3) 0 0; }
 input[type='file'] { display: none; }
 
+/* — tool page primitives — */
+.tool-section { padding: 0 0 clamp(40px, 6vw, 72px); }
+.tool-card { display: grid; gap: var(--space-6); padding: var(--space-6); }
+.dropzone {
+  position: relative; border-radius: var(--radius-md);
+  border: 1px dashed var(--color-neutral-600); background: var(--color-neutral-800);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: var(--space-2); cursor: pointer; overflow: hidden; text-align: center;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.dropzone:hover { border-color: var(--color-neutral-500); }
+.dropzone.drag-over { border-color: var(--color-accent); background: color-mix(in srgb, var(--color-accent-800) 40%, var(--color-neutral-800)); }
+.dropzone .placeholder-icon { color: var(--color-neutral-500); }
+.dropzone .placeholder-text { font-size: 13px; color: color-mix(in srgb, var(--color-text) 60%, transparent); padding: 0 var(--space-3); }
+.dropzone .thumb { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: var(--color-neutral-900); }
+.dropzone .remove-btn {
+  position: absolute; top: var(--space-2); right: var(--space-2); width: 28px; height: 28px;
+  border-radius: 50%; background: color-mix(in srgb, var(--color-neutral-900) 80%, transparent);
+  border: 1px solid var(--color-neutral-600); color: var(--color-text);
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+.dropzone .remove-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.preview-wrap {
+  background: var(--color-neutral-900); border: 1px solid var(--color-neutral-700);
+  border-radius: var(--radius-md); padding: var(--space-4);
+  min-height: 160px; display: flex; align-items: center; justify-content: center;
+}
+.preview-wrap canvas { max-width: 100%; max-height: 420px; height: auto; display: block; }
+.preview-empty { font-size: 13px; color: color-mix(in srgb, var(--color-text) 55%, transparent); text-align: center; }
+.actions { display: flex; justify-content: flex-end; align-items: center; gap: var(--space-3); }
+.actions .hint { font-size: 12px; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin-right: auto; }
+
 /* — rules — */
 .hr {
   height: 1px; border: 0; margin: var(--space-4) 0;
