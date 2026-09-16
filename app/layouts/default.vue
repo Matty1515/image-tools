@@ -12,9 +12,9 @@
 
     <slot />
 
-    <div class="wrap">
+    <div class="wrap-wide">
       <hr class="rule" />
-      <footer class="note">All processing happens locally in your browser. Nothing is ever uploaded to a server.</footer>
+      <footer class="note">All processing happens locally in your browser. Nothing is uploaded to a server.</footer>
     </div>
   </div>
 </template>
@@ -23,12 +23,17 @@
 .page {
   min-height: 100vh;
   background:
-    radial-gradient(1100px 640px at 85% -140px, color-mix(in srgb, var(--color-accent-900) 70%, transparent), transparent 60%),
-    radial-gradient(900px 700px at -10% 100%, color-mix(in srgb, black 28%, transparent), transparent 55%),
+    radial-gradient(1200px 700px at 88% -160px, color-mix(in srgb, var(--color-accent-900) 75%, transparent), transparent 60%),
+    radial-gradient(900px 700px at -10% 40%, color-mix(in srgb, var(--color-accent-2-900) 45%, transparent), transparent 55%),
+    radial-gradient(900px 700px at 50% 120%, color-mix(in srgb, black 30%, transparent), transparent 55%),
     var(--color-bg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
-.nav { padding-inline: max(clamp(20px, 5vw, 56px), calc((100% - 880px) / 2 + clamp(20px, 5vw, 56px))); }
-.nav-brand {
+.nav { padding-inline: max(clamp(20px, 5vw, 56px), calc((100% - 1080px) / 2 + clamp(20px, 5vw, 56px))); }
+.nav-brand,
+.nav-brand[aria-current='page'] {
   display: inline-flex; align-items: center; gap: var(--space-2);
   font-size: 18px; color: inherit; text-decoration: none;
 }

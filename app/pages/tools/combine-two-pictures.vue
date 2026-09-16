@@ -140,7 +140,7 @@ function download() {
 </script>
 
 <template>
-  <div class="wrap">
+  <div class="wrap-wide">
     <section class="hero">
       <h1 class="display">Combine two pictures into one.</h1>
       <p class="sub">Upload two images, choose a layout, download the result. Everything happens in your browser — nothing is uploaded anywhere.</p>
@@ -148,7 +148,7 @@ function download() {
   </div>
 
   <section class="tool-section" id="tool">
-    <div class="wrap">
+    <div class="wrap-wide">
       <div class="card elev-md tool-card">
 
         <div class="uploads">
