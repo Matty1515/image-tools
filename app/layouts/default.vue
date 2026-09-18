@@ -2,10 +2,7 @@
   <div class="page">
     <nav class="nav">
       <NuxtLink to="/" class="nav-brand">
-        <svg class="brand-mark" width="20" height="20" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="24" y="60" width="120" height="136" rx="14" fill="currentColor" opacity="0.55" />
-          <rect x="112" y="60" width="120" height="136" rx="14" stroke="currentColor" stroke-width="14" />
-        </svg>
+        <img class="brand-mark" src="/image-tools-logo.png" alt="" width="27" height="25" />
         Image Tools
       </NuxtLink>
     </nav>
@@ -37,6 +34,6 @@
   display: inline-flex; align-items: center; gap: var(--space-2);
   font-size: 18px; color: inherit; text-decoration: none;
 }
-.brand-mark { color: var(--color-accent); flex-shrink: 0; }
+.brand-mark { width: auto; height: 18px; flex-shrink: 0; object-fit: contain; }
 footer.note { padding: var(--space-6) 0 var(--space-8); font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
 </style>
